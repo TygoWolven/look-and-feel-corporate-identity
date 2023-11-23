@@ -30,9 +30,15 @@ modeSwitch.addEventListener("click" , () =>{
 
 // Mijn Javascript 
 
-const dropDownButton = document.querySelector(".authinfo > button"),
-      dropDown       = document.querySelector(".dropdown");
+const dropDownButton    = document.querySelector(".authinfo > h3 > button"),
+      dropDown          = document.querySelector(".dropdown"),
+      reservationButton = document.querySelector(".bookdetails > button"),
+      reservationState  = document.querySelector(".bookdetails > button > h3");
 
 dropDownButton.addEventListener("click" , () =>{
     dropDown.classList.toggle("dropdown-open");
+});
+
+reservationButton.addEventListener("click" , () =>{
+    reservationState.textContent = "Toegevoegd aan Reserveringen!";
 });

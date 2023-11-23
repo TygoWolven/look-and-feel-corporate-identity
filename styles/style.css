@@ -13,9 +13,8 @@
     --toggle-color: #DDD;
     --text-color: #505050;
 
-    --border: 0.1rem solid rgba(0, 0, 0, 0.1);
-    --border-hover: 0.1rem solid var(--black);
-    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    --border: 0.8em solid var(--sidebar-color);
+    --thin-border: 0.25em solid var(--sidebar-color);
 
     --code-font: "Source Code Pro", monospace;
     --primary-font: "Avenir-roman", "Montserrat", "Poppins", sans-serif;
@@ -23,38 +22,62 @@
 
 .bookdetails {
     padding: 2em;
-    margin: 0 0 0 1.8em;
-    max-width: 80%;
+    margin: 0 6em 0 6em;
+    background-image: linear-gradient(
+        #FF0000 210px,
+        var(--sidebar-color) 210px
+    );
+    border: var(--thin-border);
 
     display: grid;
     grid-template-columns: 1fr 3fr 2fr;
     grid-template-areas: 
-    "image author author"
+    "image author reservation"
     "image title title"
     "image details availability"
     "image list list2"
-    "authinfo authinfo elsa"
-    "suggestion suggestion suggestion";
+    "suggestion suggestion suggestion"
+    "authinfo authinfo authinfo";
 }
 
 .bookdetails img {
     max-width: 22em;
+    border: var(--border);
 
     grid-area: image;
 }
 
+.bookdetails > button {
+    background-color: var(--sidebar-color);
+    color: var(--text-color);
+    border: var(--thin-border);
+    transition: var(--tran-05);
+    scale: 0.8;
+
+    grid-area: reservation;
+}
+
+.bookdetails > button:hover {
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+    border: var(--border);
+    transition: var(--tran-05);
+}
+
 .bookdetails h1 {
-    font-size: 3em;
+    font-size: 3.25em;
     padding-left: 1em;
     margin-top: -0.15em;  
+    color: var(--sidebar-color);
 
     grid-area: title;
 }
 
 .bookdetails h2 {
     font-weight: 100;
-    font-size: 1.75em;
-    padding-left: 1.75em;
+    font-size: 2em;
+    padding-left: 1.62em;
+    color: var(--sidebar-color);
     
     grid-area: author;
     align-self: end;
@@ -62,18 +85,18 @@
 
 .bookdetails h3{
     grid-area: details;
-    align-self: end;
+    align-self: end; 
 }   
 
 .bookdetails > ul {
     list-style: none;
-    padding-left: 2em;  
+    padding-left: 3.4em;  
 
     grid-area: list;
 }
 
 .bookdetails > ul:nth-of-type(2){
-    padding-left: 15em;
+    padding-left: 16em;
 }
 
 .bookdetails p {
@@ -86,6 +109,10 @@
 .bookdetails > p:nth-of-type(1) {
     max-width: 80%;
 }
+
+.bookdetails > h3:nth-of-type(1){
+    padding-left: 2.25em;
+}  
 
 .bookdetails h3:nth-of-type(2){
     grid-area: availability;
@@ -104,6 +131,15 @@
     grid-area: authinfo;
 }
 
+.authinfo > h3 > button {
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    opacity: 80%;
+    scale: 1.2;
+    padding-left: 1em;
+}
+
 .dropdown {
     display: none;
 }
@@ -112,14 +148,18 @@
     display: block;
 }
 
-.authinfo h4 {
-    font-size: 1.3em;
-    padding: 1em 0 0.3em 1.58em;
+.dropdown > p {
+    max-width: 75%;
 }
 
 #elsa {
-    grid-area: elsa;
-    align-self: center;
+    float: inline-end;
+    margin-top: -18em;
+}
+
+.authinfo h4 {
+    font-size: 1.3em;
+    padding: 1em 0 0.3em 1.58em;
 }
 
 .suggestedbooks {
@@ -138,6 +178,120 @@
 .suggestedbooks ul li img {
     max-width: 12em;
 }
+
+  /*#########################################################*/
+ /* Vanaf hier begint mijn eigen code van de Welkompagina!  */
+/*#########################################################*/
+
+.welcome-info {
+    padding: 15px 50px;
+}
+
+.welcome-info ul {
+    margin: 1em;
+    max-width: 33em;
+}
+
+.welcome-info ul a {
+    color: #FF0000;
+}
+
+h1 {
+    line-height: 1em;
+    font-size: 50px;
+    margin-bottom: 0.25em;
+}
+
+#welkom1 {
+    max-width: 33em;
+    margin-top: 3em;
+}
+#welkom2{
+    margin-top: 3em;
+}
+
+.copyright {
+    margin: 4em;
+    padding-bottom: 2em;
+    float: right;
+    font-size: 0.7em;
+}
+
+  /*######################################################*/
+ /* Vanaf hier begint mijn eigen code van de Leeslijst!  */
+/*######################################################*/
+
+/* We beginnen hier met een paar algemene aanpassingen aan de website, die we overal willen toepassen. */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.home {
+    color: var(--text-color);
+}
+
+h3 {
+    padding-left: 1.3em;
+    font-size: 1.5em;
+}
+
+/* Vervolgens gaan we de leeslijst stylen. */
+
+.readinglist {
+    background-color: var(--sidebar-color);
+    padding: 2em;
+    margin: 0 3.8em 0 3.8em;
+}
+
+/* Om de elementen binnen de lijst mooi te positioneren, gebruik ik de grid-areas. Hiermee kan je elk element zijn eigen plek geven. */
+
+.books li{
+    border-top: solid var(--primary-color-light);
+    padding: 1.25em;
+    list-style: none;
+
+    display: grid;
+    grid-template-areas: 
+    "image author"
+    "image title"
+    "image description";
+}
+
+.books a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.books img {
+    max-width: 15em;
+    padding-left: 5em;
+        
+    grid-area: image;
+}
+
+/* Doordat ik hier de elementen een grid-area: "" ; geef kan ik bij de parent alle elementen netjes op zijn eigen plek zetten. */
+
+.books h2 {
+    font-size: 2em;
+
+    grid-area: title;
+}
+
+.books h3 {
+    font-size: 1.5em;
+    padding: 0;
+
+    grid-area: author;
+    align-self: end;
+}
+
+.books p {
+    max-width: 40em;
+
+    grid-area: description;
+}
+
 
   /*##################################*/
  /* Dit is het einde van mijn code!  */
@@ -186,7 +340,7 @@
     --tran-03: all 0.2s ease;
     --tran-03: all 0.3s ease;
     --tran-04: all 0.3s ease;
-    --tran-05: all 0.3s ease;
+    --tran-05: all 0.4s ease;
 }
 
 
@@ -488,7 +642,7 @@ body.dark .switch::before{
 
 .sidebar.close ~ .home{
     left: 88px;
-    height: 194vh;
+    height: 160vh;
     width: calc(100% - 78px);
 }
 body.dark .home .text{
