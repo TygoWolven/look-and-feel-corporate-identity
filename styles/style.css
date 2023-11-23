@@ -15,9 +15,6 @@
 
     --border: 0.8em solid var(--sidebar-color);
     --thin-border: 0.25em solid var(--sidebar-color);
-
-    --code-font: "Source Code Pro", monospace;
-    --primary-font: "Avenir-roman", "Montserrat", "Poppins", sans-serif;
 }
 
 .bookdetails {
