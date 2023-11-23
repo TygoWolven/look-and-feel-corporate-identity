@@ -1,37 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Link naar CSS -->
+    <!-- Link naar mijn CSS -->
     <link rel="stylesheet" href="./styles/style.css">
     
-    <!-- Link naar boxicons -->
+    <!-- Link naar de boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- Link naar JavaScript -->
+    <!-- Link naar mijn JavaScript -->
     <script src="./scripts/script.js" defer></script>
-
-    <title>Openbare Bibliotheek Amsterdam</title>
+    
+    <title>Mijn OBA</title> 
 </head>
 
-<body>
+<!-- Vanaf hier is het code van de verkregen template. -->
 
+<body>
     <nav class="sidebar close">
         <header>
             <div class="image-text">
                 <span class="image">
-                    <a href="./index.html">
                     <img src="./image/AmberFoto.jpeg" alt="Gebruiker-foto">
-                    </a>
                 </span>
 
                 <div class="text logo-text">
-                    <a href="./index.html" id="user-name">
                     <span class="name">Amber v/d Reijden</span>
                     <span class="profession">5 jaar lid</span>
-                    </a>
                 </div>
             </div>
 
@@ -47,24 +45,17 @@
                 </li>
 
                 <ul class="menu-links">
-                    <li class="nav-link"> 
+                    <li class="nav-link">
                         <a href="./index.html">
                             <i class='bx bx-home icon'></i>
                             <span class="text nav-text">Welkom</span>
                         </a>
                     </li>
 
-                    <li class="nav-link">
-                        <a href="#"> 
-                            <i class='bx bx-group icon'></i>
-                            <span class="text nav-text">Familieoverzicht</span>
-                        </a>
-                    </li>
-
                     <li class="nav-link" style="background: #FF0000; border-radius: 6px;">
                         <a href="./leeslijst.html">
                             <i class='bx bx-list-ul icon' style="color: #FFF;"></i>
-                            <span class="text nav-text"style="color: #FFF;">Leeslijst</span>
+                            <span class="text nav-text"   style="color: #FFF;">Leeslijst</span>
                         </a>
                     </li>
 
@@ -99,7 +90,7 @@
                     <li class="nav-link">
                         <a href="#">
                             <i class='bx bx-wallet icon' ></i>
-                            <span class="text nav-text">Deposito's</span>
+                            <span class="text nav-text">Desposito's</span>
                         </a>
                     </li>
 
@@ -137,17 +128,56 @@
 
     </nav>
 
-    <main>
+    <!-- Vanaf hier is de verkregen code vermixt met mijn eigen code! -->
 
-    <section class="leeslijst">
+    <section class="home">
+        <div class="text">
 
-        <ul>
-            <li><a href="./degeschiedenis.html">De Geschiedenis</a></li>
-        </ul>
+            <img src="./image/oba_20.png" alt="Logo Openbare Bibliotheek Amsterdam">    
+            <h1>Leeslijst</h1>
+            <p>Bekijk hier ons complete aanbod aan boeken.</p>
 
+        </div>
+
+        <!-- De readinglist is de gehele pagina met daarin een unordered list om de boeken te weergeven. -->
+    
+        <section class="readinglist">
+
+            <ul class="books">
+                <a href="./degeschiedenis.html">
+                    <li>
+                        <img src="./image/degeschiedenis.jpg" alt="Book Cover De geschiedenis">
+                        <h3>Elsa Morante</h3>
+                        <h2>De geschiedenis</h2>
+                        <p>Tegen de achtergrond van de officiële geschiedenis wordt het leven beschreven van een arme onderwijzeres en 
+                        haar twee zonen in Rome tijdens de Tweede Wereldoorlog en de jaren daarna.</p>
+                    </li>
+                </a>
+
+                <a href="./hetspaansevanspanje.html">
+                    <li>
+                        <img src="./image/hetspaansevanspanje.jpg" alt="Book Cover Het Spaanse van Spanje">
+                        <h3>Cees Nooteboom</h3>
+                        <h2>Het Spaanse van Spanje</h2>
+                        <p>Verhalen van de Nederlandse schrijver (1933) over de cultuur, natuur en politieke omstandigheden in Spanje 
+                        van eind jaren '50 tot en met het jaar 2001.</p>
+                    </li>
+                </a>
+
+                <a href="./detranenmaker.html">
+                    <li>
+                        <img src="./image/detranenmaker.jpg" alt="Book Cover De Tranenmaker">
+                        <h3>Erin Doom</h3>
+                        <h2>De tranenmaker</h2>                            <p>Nica (17) en de onuitstaanbare Rigel worden samen uit een weeshuis geadopteerd. Dan komen ze erachter dat 
+                        de legende over een mysterieus figuur die alle menselijke angsten veroorzaakt echt waar blijkt te zijn. Vanaf 
+                        ca. 15 jaar.</p>
+                    </li>
+                </a>
+            </ul>
+
+        </section>
+        
     </section>
 
-    </main>
-    
 </body>
 </html>
