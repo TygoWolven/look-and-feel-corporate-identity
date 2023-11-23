@@ -124,6 +124,23 @@
     grid-area: list2;
 }
 
+.recommended {
+    padding-top: 2.5em;
+
+    grid-area: suggestion;
+}
+
+.recommended > ul {
+    display: flex;
+    overflow-x: scroll;
+    margin-right: 2em;
+    list-style: none;
+}
+
+.recommended ul li img {
+    max-width: 12em;
+}
+
 .authinfo {
     max-width: 90%;
     padding-top: 2em;
@@ -138,6 +155,11 @@
     opacity: 80%;
     scale: 1.2;
     padding-left: 1em;
+}
+
+.authinfo h4 {
+    font-size: 1.3em;
+    padding: 1em 0 0.3em 1.58em;
 }
 
 .dropdown {
@@ -157,27 +179,73 @@
     margin-top: -18em;
 }
 
-.authinfo h4 {
-    font-size: 1.3em;
-    padding: 1em 0 0.3em 1.58em;
-}
 
-.suggestedbooks {
-    padding-top: 2.5em;
 
-    grid-area: suggestion;
-}
 
-.suggestedbooks > ul {
-    display: flex;
-    overflow-x: scroll;
-    margin-right: 2em;
-    list-style: none;
-}
 
-.suggestedbooks ul li img {
-    max-width: 12em;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   /*#########################################################*/
  /* Vanaf hier begint mijn eigen code van de Welkompagina!  */
@@ -291,7 +359,6 @@ h3 {
 
     grid-area: description;
 }
-
 
   /*##################################*/
  /* Dit is het einde van mijn code!  */
