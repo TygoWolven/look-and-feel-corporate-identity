@@ -1,3 +1,6 @@
+
+// Template Javascript
+
 const body = document.querySelector('body'),
 sidebar = body.querySelector('nav'),
 toggle = body.querySelector(".toggle"),
@@ -23,4 +26,13 @@ modeSwitch.addEventListener("click" , () =>{
         modeText.innerText = "Dark mode";
         
     }
+});
+
+// Mijn Javascript 
+
+const dropDownButton = document.querySelector(".authinfo > button"),
+      dropDown       = document.querySelector(".dropdown");
+
+dropDownButton.addEventListener("click" , () =>{
+    dropDown.classList.toggle("dropdown-open");
 });
