@@ -693,7 +693,7 @@ body.dark .switch::before{
     left: 250px;
     height: 201vh;
     width: calc(100% - 250px);
-    background-image: url(/image/obawallpaper\ \(1\).png);
+    background-image: url(../image/obawallpaper\ \(1\).png);
     background-size: 100%;
     background-repeat: no-repeat;
     transition: var(--tran-05);
