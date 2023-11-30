@@ -35,6 +35,9 @@ const dropDownButton    = document.querySelector(".authinfo > h3 > button"),
       reservationButton = document.querySelector(".bookdetails > button"),
       reservationState  = document.querySelector(".bookdetails > button > h3");
 
+var leftButton          = document.getElementById("scroll-left");
+var rightButton         = document.getElementById("scroll-right");
+
 dropDownButton.addEventListener("click" , () =>{
     dropDown.classList.toggle("dropdown-open");
 });
@@ -42,3 +45,28 @@ dropDownButton.addEventListener("click" , () =>{
 reservationButton.addEventListener("click" , () =>{
     reservationState.textContent = "Toegevoegd aan Reserveringen!";
 });
+
+leftButton.onclick = function () {
+    var container = document.querySelector(".recommended > ul");
+    sideScroll(container,'left',15,220,10)
+};
+
+rightButton.onclick = function () {
+    var container = document.querySelector(".recommended > ul");
+    sideScroll(container,'right',15,220,10);
+};
+
+function sideScroll(element,direction,speed,distance,step){
+    scrollAmount = 0;
+    var slideTimer = setInterval(function(){
+        if(direction == 'left'){
+            element.scrollLeft -= step;
+        } else {
+            element.scrollLeft += step;
+        }
+        scrollAmount += step;
+        if(scrollAmount >= distance){
+            window.clearInterval(slideTimer);
+        }
+    }, speed);
+}
