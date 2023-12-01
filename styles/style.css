@@ -159,12 +159,23 @@
 
     & ul li img {
         max-width: 12em;
+        margin-left: -0.6em;
     }
 
     & button {
-        height: 30px;
+        height: 65px;
         aspect-ratio: 1 / 1;
         position: absolute;
+        background: transparent;
+        border: none;
+        font-size: 3em;
+        transition: var(--tran-05);
+        color: var(--text-color);
+    }
+
+    & button:hover {
+        scale: 1.25;
+        transition: var(--tran-05);
     }
 
     & button:nth-of-type(1) {

@@ -42,18 +42,22 @@ dropDownButton.addEventListener("click" , () =>{
     dropDown.classList.toggle("dropdown-open");
 });
 
+function scrollWin() {
+    window.scrollBy(0, 1000);
+  }
+
 reservationButton.addEventListener("click" , () =>{
     reservationState.textContent = "Toegevoegd aan Reserveringen!";
 });
 
 leftButton.onclick = function () {
     var container = document.querySelector(".recommended > ul");
-    sideScroll(container,'left',15,220,10)
+    sideScroll(container,'left',15,190,10)
 };
 
 rightButton.onclick = function () {
     var container = document.querySelector(".recommended > ul");
-    sideScroll(container,'right',15,220,10);
+    sideScroll(container,'right',15,190,10);
 };
 
 function sideScroll(element,direction,speed,distance,step){
@@ -70,3 +74,6 @@ function sideScroll(element,direction,speed,distance,step){
         }
     }, speed);
 }
+
+
+
