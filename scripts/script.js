@@ -44,7 +44,7 @@ dropDownButton.addEventListener("click" , () =>{
 
 function scrollWin() {
     window.scrollBy(0, 1000);
-  }
+}
 
 reservationButton.addEventListener("click" , () =>{
     reservationState.textContent = "Toegevoegd aan Reserveringen!";
